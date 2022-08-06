@@ -14,6 +14,7 @@ struct CardView: View {
         VStack (alignment: .leading) {
             Text(scrum.title)
                 .font(.headline)
+                .accessibilityAddTraits(.isHeader)
         
         
             Spacer()
@@ -24,7 +25,7 @@ struct CardView: View {
                 Spacer()
                 
                 Label("\(scrum.lengthInMinutes)", systemImage: "clock")
-                    .padding([.trailing], 20)
+                    .labelStyle(.trailingIcon)
             }
             .font(.caption)
             
